@@ -30,6 +30,18 @@ PrefabFiles = {
 	"dungpile",
 	"pog",
 	"pogherd", 
+    --mod hippopotamoose
+    "hippopotamoose",
+    "hippoherd",
+    "hippo_antler",
+    "lillypad",
+    "lotus",
+    "lotus_flower",
+    "bill",
+    "bill_quill",
+    "reeds_water",
+    "frog_poison",
+    "froglegs_poison"
 }
 
 Assets = {
