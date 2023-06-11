@@ -14,3 +14,11 @@ function SpawnWaves(inst, numWaves, totalAngle, waveSpeed, wavePrefab, initialOf
     return SpawnAttackWaves(inst:GetPosition(), (random_angle and math.random(-180, 180)) or inst.Transform:GetRotation(), initialOffset or (inst.Physics and inst.Physics:GetRadius()) or 0.0, numWaves, totalAngle, waveSpeed, wavePrefab or "wave_med",  idleTime or 5, instantActive)
 end
 
+function IsPositionValidForEnt(inst, radius_check)
+    return function(pt)
+        return inst:IsAmphibious()
+            or (inst:IsAquatic() and not inst:GetIsCloseToLand(radius_check, pt))
+            or (inst:IsTerrestrial() and not inst:GetIsCloseToWater(radius_check, pt))
+    end
+end
+
